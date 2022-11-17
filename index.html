@@ -9,9 +9,18 @@
     <script src="./main.js"></script>
 </head>
 
-<body>
-    <img src="./plus.png" id="plusicon" hidden="true">
-    <button class="button-40" onclick="getBestHeroPlayerRank()">roblox sex irl</button>
+<body>   
+    <img src="./plus.png" id="plusicon" style="display:none">
+    <button class="button-40" onclick="
+    if (document.getElementById('plusicon').style.display == 'block') document.getElementById('plusicon').style.display = 'none'
+    if (document.body.contains(document.getElementById('maindiv'))) document.getElementById('maindiv').remove();
+    if (document.body.contains(document.getElementById('avatarImage'))) document.getElementById('avatarImage').remove();
+    if (document.body.contains(document.getElementById('aAvatarImage'))) document.getElementById('aAvatarImage').remove();
+    if (document.body.contains(document.getElementById('playerName'))) document.getElementById('playerName').remove();
+    if (document.body.contains(document.getElementById('playerRank'))) document.getElementById('playerRank').remove();
+    getBestHeroPlayerRank();">
+        roblox sex irl</button>
 
 </body>
+
 </html>
