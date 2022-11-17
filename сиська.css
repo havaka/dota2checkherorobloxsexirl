@@ -1,3 +1,6 @@
+*{
+  padding: 3px
+}
 body {
   background-color: #808080;
 }
@@ -18,8 +21,7 @@ body {
   line-height: 1.5rem;
   padding: .75rem 1.2rem;
   text-align: center;
-  text-decoration: none #6B7280 solid;
-  text-decoration-thickness: auto;
+  text-decoration: none #6B7280 solid; 
   transition-duration: .2s;
   transition-property: background-color, border-color, color, fill, stroke;
   transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
@@ -29,7 +31,7 @@ body {
   width: 15%;
 }
 
-.plusicon{
-  width: ;
-  height: ;
+#avatarImage {
+  transform: translate(-15vw, 1vw);
 }
+

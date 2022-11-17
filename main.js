@@ -9,13 +9,14 @@ var getBestHeroPlayerRank = async () => {
         .then(playerInfoJson => {
 
             console.log(playerInfoJson)
+            
 
             if (playerInfoJson.profile.plus) document.getElementById('plusicon').style.display = 'block'
 
             let img = document.createElement('img')
             document.body.appendChild(img)
             img.setAttribute('id', 'avatarImage')
-            img.src = playerInfoJson.profile.avatar
+            img.src = playerInfoJson.profile.avatarfull
 
             let name = document.createElement('h4')
             document.body.appendChild(name)
@@ -26,8 +27,6 @@ var getBestHeroPlayerRank = async () => {
             document.body.appendChild(rank)
             rank.setAttribute('id', 'playerRank')
             rank.innerHTML = `Rank: ${playerInfoJson.leaderboard_rank}`
-
-
         })
         .catch(err => console.log(err))
 }
