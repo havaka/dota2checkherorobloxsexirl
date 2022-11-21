@@ -1,14 +1,14 @@
 * {
-  padding: 3px
+  padding: 5px
 }
 
 body {
-  background-color: #808080;
+  background-color: #4e3939
 }
 
 .button-40 {
-  transform: translate(270%, 500%);
-  background-color: #ea7aee;
+  transform: translate(38vw, 25vh);
+  background-color: #BC7B77;
   border: 1px solid transparent;
   border-radius: .75rem;
   box-sizing: border-box;
@@ -29,5 +29,75 @@ body {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 15%;
+  width: 20%;
+}
+
+#avatarImage {
+  width: 100px;
+  height: 100px;
+}
+
+#plusicon {
+  width: 88px;
+  height: 100px;
+}
+
+#wrongHero {
+  position: absolute;
+  transform: translate(40vw, 3vh);
+  width: 20vw;
+  height: 10vh;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.075em;
+
+  color: #BC7B77
+}
+
+#maindiv {
+  transform: translate(40vw, 30vh);
+  width: 30vw;
+  height: 25vh;
+  align-items: baseline;
+}
+
+#feedbackdiv {
+  transform: translate(65vw, 80vh);
+  position: absolute;
+  width: 30vw;
+  height: 7vh;
+  flex-direction: row;
+}
+
+#feedbacktext {
+  font-family: 'Inter';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.075em;
+
+  transform: translate(0px, -4vh);
+
+  width: 50%;
+
+  color: #F2A0FF;
+}
+
+#gita {
+  position: absolute;
+  transform: translate(15.5vw, -15.5vh);
+}
+
+#discorda {
+  transform: translate(25vw, -13vh);
+  width: 65px;
+  height: 65px;
+  padding: 0px;
 }

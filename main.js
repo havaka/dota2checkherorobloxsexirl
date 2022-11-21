@@ -1,8 +1,13 @@
 var getBestHeroPlayerRank = async () => {
-
     let heroid = heroToId(prompt(`Hero to check?`))
-
-    return await fetch(`https://api.opendota.com/api/rankings?hero_id=${heroid}`)
+    if (heroid === 'wronghero') {
+        var wrongHero = document.createElement('p')
+        document.body.appendChild(wrongHero)
+        wrongHero.setAttribute('id', 'wrongHero')
+        wrongHero.innerHTML = `Wrong hero<br><br>example: morph, pl, alchemist`
+        return
+    }
+        return await fetch(`https://api.opendota.com/api/rankings?hero_id=${heroid}`)
         .then(ans => ans.json())
         .then(ans => fetch(`https://api.opendota.com/api/players/${ans.rankings[0].account_id}`))
         .then(ans => ans.json())
@@ -14,7 +19,12 @@ var getBestHeroPlayerRank = async () => {
             document.body.appendChild(maindiv)
             maindiv.setAttribute('id', 'maindiv')
 
-            if (playerInfoJson.profile.plus) document.getElementById('plusicon').style.display = 'block'
+            var plusicon = document.createElement('img')
+            maindiv.appendChild(plusicon)
+            plusicon.setAttribute('id', 'plusicon')
+            plusicon.src = './plus.png'
+
+            if (playerInfoJson.profile.plus)  document.getElementById('plusicon').style.display = 'block'
 
             var a = document.createElement('a')
             maindiv.appendChild(a)
@@ -367,5 +377,7 @@ var heroToId = hero => {
         case 'beast':
         case 'primalbeast':
             return 137
+        default:
+            return 'wronghero'
     }
 }

@@ -12,15 +12,20 @@
 <body>   
     <img src="./plus.png" id="plusicon" style="display:none">
     <button class="button-40" onclick="
-    if (document.getElementById('plusicon').style.display == 'block') document.getElementById('plusicon').style.display = 'none'
-    if (document.body.contains(document.getElementById('maindiv'))) document.getElementById('maindiv').remove();
+    if (document.body.contains(document.getElementById('plusicon'))) document.getElementById('plusicon').remove();    
+    if (document.body.contains(document.getElementById('maindiv'))) document.getElementById('maindiv').remove();    
+    if (document.body.contains(document.getElementById('wrongHero'))) document.getElementById('wrongHero').remove();
     if (document.body.contains(document.getElementById('avatarImage'))) document.getElementById('avatarImage').remove();
     if (document.body.contains(document.getElementById('aAvatarImage'))) document.getElementById('aAvatarImage').remove();
     if (document.body.contains(document.getElementById('playerName'))) document.getElementById('playerName').remove();
     if (document.body.contains(document.getElementById('playerRank'))) document.getElementById('playerRank').remove();
     getBestHeroPlayerRank();">
-        roblox sex irl</button>
+        Find best player for your hero</button>
 
+        <div id="feedbackdiv">
+            <h5 id="feedbacktext">If you have something to tell me, i'm always opened for criticism</h5>
+            <a href="https://github.com/havaka/dotacheckbestheroplayer" id="gita"><img src="./github.png" style="width:65px;height:65px;padding:0px"></a>
+        </div>
 </body>
 
 </html>
